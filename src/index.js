@@ -4,6 +4,8 @@ import { GlobalState } from "./state/globalState";
 import Summary from "./components/Summary";
 import Form from "./components/Form";
 import Header from "./components/Header";
+import TodoList from "./components/TodoList";
+import TodoForm from "./components/TodoForm";
 import "./styles.css";
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <Header />
       <Summary />
       <Form />
+      <TodoForm />
+      <TodoList />
     </GlobalState>
   );
 }
