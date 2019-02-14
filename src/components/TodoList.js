@@ -7,10 +7,19 @@ const TodoList = () => {
   } = useContext(GlobalContext);
 
   return (
-    <ol>
+    <ol class="list-group">
       {todos.map(({ id, text }) => (
-        <li key={id} onClick={() => removeTodo(id)}>
-          {text}
+        <li
+          className="list-item d-flex justify-content-between align-items-center my-1"
+          key={id}
+        >
+          <span>{text}</span>
+          <button
+            onClick={() => removeTodo(id)}
+            className="btn btn-danger btn-sm"
+          >
+            delete
+          </button>
         </li>
       ))}
     </ol>

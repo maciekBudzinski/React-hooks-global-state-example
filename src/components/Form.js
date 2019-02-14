@@ -11,14 +11,29 @@ const Form = () => {
   const surnameInput = useFormInput(surname);
 
   return (
-    <div>
-      <input {...nameInput} />
-      <button onClick={() => setName(nameInput.value)}>update name</button>
-      <input {...surnameInput} />
-      <button onClick={() => setSurname(surnameInput.value)}>
-        change surname
-      </button>
-    </div>
+    <>
+      <h3 className="mb-2">User info</h3>
+      <div class="form-inline">
+        <div className="form-group">
+          <input className="form-control mr-2" {...nameInput} />
+          <input
+            type="button"
+            value="update name"
+            className="btn btn-primary"
+            onClick={() => setName(nameInput.value)}
+          />
+        </div>
+        <div className="form-group my-1">
+          <input className="form-control mr-2" {...surnameInput} />
+          <input
+            type="button"
+            value="update surname"
+            className="btn btn-primary"
+            onClick={() => setSurname(surnameInput.value)}
+          />
+        </div>
+      </div>
+    </>
   );
 };
 

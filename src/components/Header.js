@@ -3,15 +3,17 @@ import GlobalContext from "../state/globalState";
 
 const Header = () => {
   const {
-    user: [{ name }, {}],
+    user: [{ name, surname }, {}],
     todo: [{ todos }, {}]
   } = useContext(GlobalContext);
 
   return (
-    <nav>
-      <p>{name}</p>
-      <span>{todos.length}</span>
-    </nav>
+    <div class="nav">
+      <p className="mr-3">
+        {name} {surname}
+      </p>
+      <span>You have {todos.length} todos</span>
+    </div>
   );
 };
 
